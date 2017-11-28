@@ -1,0 +1,56 @@
+define({ "api": [
+  {
+    "type": "get",
+    "url": "/get-articles",
+    "title": "获取博客列表",
+    "description": "<p>获取博客列表</p>",
+    "name": "get_articles",
+    "group": "Lipper",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "count",
+            "description": "<p>每页显示数</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "type",
+            "description": "<p>显示所有类型博客</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n\n{\n\t\"status\": 1,\n\t\"info\": {\n  \t\"articles\":[\n    \t\t{\n      \t\t\"id\": 102,\n      \t\t\"title\": \"深入浅出ES6 — 解构\",\n      \t\t\"tag\": \"ES6\",\n      \t\t\"abstract\": \"解构赋值解构赋值允许你使用类似数组或者对象字面量的方式将数组或对象的属性赋值给各个变量。和传统方式相比，这种赋值语法更加简洁和清晰。举个栗子：123456var arr = [1,2,3];var a = arr[0];var b = arr[1];var c\",\n      \t\t\"created_at\": \"2017-11-03\",\n      \t\t\"views\": 1,\n      \t\t\"theme\": \"ES6\"\n    \t\t}\n  \t],\n  \t\"total\": 1\n\t}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\nHTTP/1.1 404 Not Found\n{\n    \"status\": 404\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "server/routes/index.js",
+    "groupTitle": "Lipper",
+    "sampleRequest": [
+      {
+        "url": "http://192.168.18.17:3000/get-articles"
+      }
+    ]
+  }
+] });
