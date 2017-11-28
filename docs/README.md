@@ -15,11 +15,13 @@ react + redux + react-router + ES6/7 + webpack + express
 ### 演示地址
 [Lipper的个人博客](https://119.29.38.170)
 
+域名还在备案中，暂时只能用ip地址访问
+
 ![blog url](imgs/img1.png)
 ## 开始使用
 ### 安装
 ```
-git clone https://github.com/Lipper2333/blog.git
+git clone https://github.com/qifengle/blog.git
 cd blog
 npm install
 ```
