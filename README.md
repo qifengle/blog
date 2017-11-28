@@ -13,7 +13,7 @@
 
 ### 安装
 ```
-git clone https://github.com/Lipper2333/react-projects.git
+git clone https://github.com/qifengle/blog.git
 
 cd react-projects/blog
 
